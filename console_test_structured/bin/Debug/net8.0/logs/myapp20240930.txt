@@ -1,0 +1,5 @@
+2024-09-30 11:39:28.852 +10:00 [INF] Hello, world!
+2024-09-30 11:39:29.007 +10:00 [DBG] Dividing 10 by 0
+2024-09-30 11:39:29.064 +10:00 [ERR] Something went wrong
+System.DivideByZeroException: Attempted to divide by zero.
+   at Program.Main() in C:\Users\Jackson\source\repos\practice\console_test\Program.cs:line 33
