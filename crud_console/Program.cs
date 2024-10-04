@@ -88,14 +88,25 @@
 
         static string ModifyBook(string book, int propertyIndex)
         {
+            string updatedBook = ChangeSinglePropertyOfBook(book, propertyIndex)
+            PrintUpdatedBookProperties(updatedBook);
+            return updatedBook;
+        }
+
+        static string ChangeSinglePropertyOfBook(string book, int propertyIndex)
+        {
             string[] properties = book.Split(',');
             Console.WriteLine("\nPlease enter what you would like to update to: ");
             string newProperty = Console.ReadLine();
             properties[propertyIndex] = newProperty;
             string updatedBook = String.Join(",", properties);
+            return updatedBook;
+        }
+
+        static string PrintUpdatedBookProperties(string updatedBook)
+        {
             Console.WriteLine("\nUpdated. New properties are as follows: ");
             Console.WriteLine(Interface.ConvertLineToPropertiesList(updatedBook));
-            return updatedBook;
         }
 
         static int GetIndexOfBookToModify(string modificationType)
@@ -215,7 +226,6 @@
 
     }
 
-    // no logic - this means this is a Data Transfer Object (DTO)
     class Book
     {
         public string Title { get; set; }
