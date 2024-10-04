@@ -6,16 +6,16 @@
         static void Main()
         {
             bool run = true;
-            Interface.PrintWelcomeScreen();
+            Console.WriteLine("Welcome to the Simple Library.");
+            Interface.PrintOptions();
 
-            while (run == true)
+            do
             {
-                Interface.PrintOptions();
                 string userInput = Console.ReadLine();
                 switch (userInput)
                 {
                     case "1":
-                        Interface.PrintLines(FileInteracter.ReadLinesFromFile(filePath), filePath);
+                        DisplayBooks();
                         break;
                     case "2":
                         AddBooks();
@@ -34,14 +34,23 @@
                         break;
 
                 }
-            }
+                Interface.PrintOptions();
+            } while (run == true);
         }
 
+        static void DisplayBooks()
+        {
+            Console.WriteLine("Current books in library:");
+            Interface.PrintLines(FileInteracter.ReadLinesFromFile(filePath), filePath);
+        }
         static void AddBooks()
         {
-            string filePath = "C:\\Users\\Jackson\\source\\repos\\practice\\crud_console\\WrittenLines.csv";
-            List<String> csvBooks = ConvertBookListToCSVStrings(GetUsersListOfBooks());
-            FileInteracter.WriteLinesToFile(csvBooks, filePath);
+            List<String> books = FileInteracter.ReadLinesFromFile(filePath).ToList();
+            List<String> newBooks = ConvertBookListToCSVStrings(GetUsersListOfBooks());
+
+            books.AddRange(newBooks);
+
+            FileInteracter.WriteLinesToFile(books, filePath);
         }
 
         static void RemoveBook()
@@ -50,6 +59,8 @@
             List<string> lines = FileInteracter.ReadLinesFromFile(filePath).ToList();
             lines.RemoveAt(chosenBook);
             FileInteracter.WriteLinesToFile(lines, filePath);
+            Console.WriteLine("Book removed.");
+            DisplayBooks();
         }
 
         static void UpdateBook()
@@ -67,10 +78,10 @@
             bool run = true;
             while (run)
             {
-                Console.WriteLine("Please select the part of the book you wish to update by selecting 1-3: ");
+                Console.WriteLine("\nPlease select the part of the book you wish to update by selecting 1-3: ");
                 Console.WriteLine(Interface.ConvertLineToPropertiesList(book));
                 int chosenProperty = int.Parse(Console.ReadLine()) - 1;
-                ModifyBook(book, chosenProperty);
+                book = ModifyBook(book, chosenProperty);
                 Console.WriteLine("\nDo you wish to continue editing? y/ n");
                 string continueEditing = Console.ReadLine();
                 if (continueEditing == "y")
@@ -88,7 +99,7 @@
 
         static string ModifyBook(string book, int propertyIndex)
         {
-            string updatedBook = ChangeSinglePropertyOfBook(book, propertyIndex)
+            string updatedBook = ChangeSinglePropertyOfBook(book, propertyIndex);
             PrintUpdatedBookProperties(updatedBook);
             return updatedBook;
         }
@@ -103,7 +114,7 @@
             return updatedBook;
         }
 
-        static string PrintUpdatedBookProperties(string updatedBook)
+        static void PrintUpdatedBookProperties(string updatedBook)
         {
             Console.WriteLine("\nUpdated. New properties are as follows: ");
             Console.WriteLine(Interface.ConvertLineToPropertiesList(updatedBook));
@@ -171,14 +182,10 @@
 
     class Interface
     {
-        static public void PrintWelcomeScreen()
-        {
-            Console.WriteLine("\nWelcome to the Simple Library. Please enter a number from the options below:\n");
-            PrintOptions();
-        }
 
         static public void PrintOptions()
         {
+            Console.WriteLine("\nPlease enter a number from the options below:\n");
             Console.WriteLine("1. Display current books in the library");
             Console.WriteLine("2. Add a book");
             Console.WriteLine("3. Remove a book");
