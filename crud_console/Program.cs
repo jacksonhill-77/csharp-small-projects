@@ -1,10 +1,10 @@
-﻿using System.Text.Json;
+﻿using Newtonsoft.Json;
 
 namespace CrudConsole
 {
     class Program
     {
-        static string filePath = "C:\\Users\\Jackson\\source\\repos\\practice\\crud_console\\WrittenLines.json";
+        public static string filePath = "C:\\Users\\Jackson\\source\\repos\\practice\\crud_console\\WrittenLines.json";
         static void Main()
         {
             bool run = true;
@@ -135,7 +135,7 @@ namespace CrudConsole
             List<String> output = new List<String>();
             foreach (Book book in books)
             {
-                output.Add(book.ToString());
+                output.Add(JsonConvert.SerializeObject(book));
             }
             return output;
         }
