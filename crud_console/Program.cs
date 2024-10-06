@@ -7,7 +7,12 @@ namespace CrudConsole
         public static string filePath = "C:\\Users\\Jackson\\source\\repos\\practice\\crud_console\\WrittenLines.json";
         static void Main()
         {
+
             bool run = true;
+
+            Console.WriteLine("Connecting to database...");
+            DatabaseConnect.ConnectToDB();
+
             Console.WriteLine("Welcome to the Simple Library.");
             Interface.PrintOptions();
 
