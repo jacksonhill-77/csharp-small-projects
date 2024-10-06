@@ -1,1 +1,6 @@
-/.vs/crud_console/FileContentIndex
+*.suo
+.vs/
+
+obj/
+*.AssemblyInfo.cs
+*.AssemblyInfoInputs.cache
