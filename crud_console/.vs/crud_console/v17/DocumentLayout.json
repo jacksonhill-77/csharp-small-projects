@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Jackson\\source\\repos\\practice\\crud_console\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{06052210-CDA3-4992-8F75-6C3047DA4B35}|crud_console.csproj|c:\\users\\jackson\\source\\repos\\practice\\crud_console\\databaseconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06052210-CDA3-4992-8F75-6C3047DA4B35}|crud_console.csproj|solutionrelative:databaseconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{06052210-CDA3-4992-8F75-6C3047DA4B35}|crud_console.csproj|c:\\users\\jackson\\source\\repos\\practice\\crud_console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06052210-CDA3-4992-8F75-6C3047DA4B35}|crud_console.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06052210-CDA3-4992-8F75-6C3047DA4B35}|crud_console.csproj|c:\\users\\jackson\\source\\repos\\practice\\crud_console\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06052210-CDA3-4992-8F75-6C3047DA4B35}|crud_console.csproj|solutionrelative:book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DatabaseConnect.cs",
-              "DocumentMoniker": "C:\\Users\\Jackson\\source\\repos\\practice\\crud_console\\DatabaseConnect.cs",
-              "RelativeDocumentMoniker": "DatabaseConnect.cs",
-              "ToolTip": "C:\\Users\\Jackson\\source\\repos\\practice\\crud_console\\DatabaseConnect.cs",
-              "RelativeToolTip": "DatabaseConnect.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABIAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\Jackson\\source\\repos\\practice\\crud_console\\Book.cs",
+              "RelativeDocumentMoniker": "Book.cs",
+              "ToolTip": "C:\\Users\\Jackson\\source\\repos\\practice\\crud_console\\Book.cs",
+              "RelativeToolTip": "Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T23:05:47.167Z",
+              "WhenOpened": "2024-10-06T23:42:34.384Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Jackson\\source\\repos\\practice\\crud_console\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Jackson\\source\\repos\\practice\\crud_console\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-04T23:04:56.458Z",
               "EditorCaption": ""

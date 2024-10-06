@@ -174,6 +174,9 @@ namespace CrudConsole
         }
         static Book GetUserInputAsBook()
         {
+            // dummy pid
+            int pid = 0;
+
             Console.WriteLine("\nPlease enter the book title: ");
             string title = Console.ReadLine();
 
@@ -183,7 +186,7 @@ namespace CrudConsole
             Console.WriteLine("\nPlease enter the publish date: ");
             int publishDate = int.Parse(Console.ReadLine());
 
-            return new Book(title, author, publishDate);
+            return new Book(pid, title, author, publishDate);
         }
     }
 }
