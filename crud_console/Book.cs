@@ -2,12 +2,14 @@
 {
     public class Book
     {
+        public int PID { get; set; }
         public string Title { get; set; }
         public string Author { get; set; }
         public int PublishYear { get; set; }
 
-        public Book(string title, string author, int publishYear)
+        public Book(int pid, string title, string author, int publishYear)
         {
+            PID = pid;
             Title = title;
             Author = author;
             PublishYear = publishYear;
