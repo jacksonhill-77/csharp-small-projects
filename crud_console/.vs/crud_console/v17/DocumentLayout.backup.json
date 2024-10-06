@@ -5,6 +5,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{06052210-CDA3-4992-8F75-6C3047DA4B35}|crud_console.csproj|c:\\users\\jackson\\source\\repos\\practice\\crud_console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06052210-CDA3-4992-8F75-6C3047DA4B35}|crud_console.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06052210-CDA3-4992-8F75-6C3047DA4B35}|crud_console.csproj|c:\\users\\jackson\\source\\repos\\practice\\crud_console\\interface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06052210-CDA3-4992-8F75-6C3047DA4B35}|crud_console.csproj|solutionrelative:interface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06052210-CDA3-4992-8F75-6C3047DA4B35}|crud_console.csproj|c:\\users\\jackson\\source\\repos\\practice\\crud_console\\fileinteracter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06052210-CDA3-4992-8F75-6C3047DA4B35}|crud_console.csproj|solutionrelative:fileinteracter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +22,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FileInteracter.cs",
+              "DocumentMoniker": "C:\\Users\\Jackson\\source\\repos\\practice\\crud_console\\FileInteracter.cs",
+              "RelativeDocumentMoniker": "FileInteracter.cs",
+              "ToolTip": "C:\\Users\\Jackson\\source\\repos\\practice\\crud_console\\FileInteracter.cs",
+              "RelativeToolTip": "FileInteracter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T00:08:42.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Interface.cs",
+              "DocumentMoniker": "C:\\Users\\Jackson\\source\\repos\\practice\\crud_console\\Interface.cs",
+              "RelativeDocumentMoniker": "Interface.cs",
+              "ToolTip": "C:\\Users\\Jackson\\source\\repos\\practice\\crud_console\\Interface.cs",
+              "RelativeToolTip": "Interface.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBkAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T00:02:37.075Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +58,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Jackson\\source\\repos\\practice\\crud_console\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAApwHEAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAiwDQAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-04T23:04:56.458Z",
               "EditorCaption": ""

@@ -1,8 +1,10 @@
-﻿namespace CrudConsole
+﻿using Newtonsoft.Json;
+
+namespace CrudConsole
 {
     class Program
     {
-        static string filePath = "C:\\Users\\Jackson\\source\\repos\\practice\\crud_console\\WrittenLines.csv";
+        public static string filePath = "C:\\Users\\Jackson\\source\\repos\\practice\\crud_console\\WrittenLines.json";
         static void Main()
         {
             bool run = true;
@@ -46,7 +48,7 @@
         static void AddBooks()
         {
             List<String> books = FileInteracter.ReadLinesFromFile(filePath).ToList();
-            List<String> newBooks = ConvertBookListToCSVStrings(GetUsersListOfBooks());
+            List<String> newBooks = ConvertBookListToJSON(GetUsersListOfBooks());
 
             books.AddRange(newBooks);
 
@@ -128,12 +130,12 @@
         }
                    
 
-        static List<String> ConvertBookListToCSVStrings(List<Book> books)
+        static List<String> ConvertBookListToJSON(List<Book> books)
         {
             List<String> output = new List<String>();
             foreach (Book book in books)
             {
-                output.Add(book.ToString());
+                output.Add(JsonConvert.SerializeObject(book));
             }
             return output;
         }
@@ -177,78 +179,6 @@
             int publishDate = int.Parse(Console.ReadLine());
 
             return new Book(title, author, publishDate);
-        }
-    }
-
-    class Interface
-    {
-
-        static public void PrintOptions()
-        {
-            Console.WriteLine("\nPlease enter a number from the options below:\n");
-            Console.WriteLine("1. Display current books in the library");
-            Console.WriteLine("2. Add a book");
-            Console.WriteLine("3. Remove a book");
-            Console.WriteLine("4. Update a book's contents");
-            Console.WriteLine("5. Close application");
-        }
-        static public void PrintLines(string[] lines, string filePath)
-        {
-            Console.WriteLine("\n");
-            for (int i = 0; i < lines.Length; i++)
-            {
-                Console.WriteLine(ConvertLineToReadableInfo(lines[i], i));
-            };
-        }
-
-        static public string ConvertLineToReadableInfo(string line, int index)
-        {
-            string[] properties = line.Split(',');
-            return $"{index + 1}. Title: {properties[0]}. Author: {properties[1]}. Year published: {int.Parse(properties[2])}";
-        }
-
-        static public string ConvertLineToPropertiesList(string line)
-        {
-            string[] properties = line.Split(',');
-            return $"1. Title: {properties[0]}\n2. Author: {properties[1]}\n3. Year published: {int.Parse(properties[2])}";
-        }
-    }
-
-    class FileInteracter
-    {
-        static public void WriteLinesToFile(List<String> lines, string filePath)
-        {
-            using (StreamWriter outputFile = new StreamWriter(filePath))
-            {
-                foreach (string line in lines)
-                    outputFile.WriteLine(line);
-            }
-        }
-
-        static public string[] ReadLinesFromFile(string filePath)
-        {
-            string[] lines = File.ReadAllLines(filePath);
-            return lines;
-        }
-
-    }
-
-    class Book
-    {
-        public string Title { get; set; }
-        public string Author { get; set; }
-        public int PublishYear { get; set; }
-
-        public Book(string title, string author, int publishYear)
-        {
-            Title = title;
-            Author = author;
-            PublishYear = publishYear;
-        }
-
-        public override string ToString()
-        {
-            return $"{Title},{Author},{PublishYear}";
         }
     }
 }

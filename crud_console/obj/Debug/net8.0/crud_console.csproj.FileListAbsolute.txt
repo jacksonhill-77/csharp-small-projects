@@ -13,3 +13,6 @@ C:\Users\Jackson\source\repos\practice\crud_console\obj\Debug\net8.0\refint\crud
 C:\Users\Jackson\source\repos\practice\crud_console\obj\Debug\net8.0\crud_console.pdb
 C:\Users\Jackson\source\repos\practice\crud_console\obj\Debug\net8.0\crud_console.genruntimeconfig.cache
 C:\Users\Jackson\source\repos\practice\crud_console\obj\Debug\net8.0\ref\crud_console.dll
+C:\Users\Jackson\source\repos\practice\crud_console\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Jackson\source\repos\practice\crud_console\obj\Debug\net8.0\crud_console.csproj.AssemblyReference.cache
+C:\Users\Jackson\source\repos\practice\crud_console\obj\Debug\net8.0\crud_con.D57AD874.Up2Date
