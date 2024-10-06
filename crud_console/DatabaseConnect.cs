@@ -16,9 +16,9 @@ namespace CrudConsole
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                var sql = "SELECT * FROM dbo.simple_library WHERE Author = @authorName";
+                var sql = "SELECT * FROM dbo.simple_library";
 
-                var books = connection.Query<Book>(sql, new { authorName = "F. Scott Fitzgerald" }).ToList();
+                var books = connection.Query<Book>(sql).ToList();
 
                 foreach (Book book in books)
                 {
