@@ -32,7 +32,7 @@ namespace CrudConsole
 
     public class LibraryContext : DbContext
     {
-        public DbSet<Book> Books { get; set; }
+        public DbSet<Book> simple_library { get; set; }
 
         public static String connectionString = "Server=localhost;User ID=sa;Password=9n8kZ81J0iuB;Initial Catalog=SIMPLE_LIBRARY;Integrated Security=false;TrustServerCertificate=True";
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -49,7 +49,7 @@ namespace CrudConsole
             using (var context = new LibraryContext())
             {
                 Console.WriteLine("Testing...");
-                var books = context.Books.ToList();
+                var books = context.simple_library.ToList();
                 foreach (var book in books)
                 {
                     Console.WriteLine(book);
