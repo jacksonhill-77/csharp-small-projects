@@ -11,7 +11,7 @@ namespace CrudConsole
             bool run = true;
 
             Console.WriteLine("Connecting to database...");
-            DatabaseConnect.ConnectToDB();
+            EntityMethods.QueryBooks();
 
             Console.WriteLine("Welcome to the Simple Library.");
             Interface.PrintOptions();
