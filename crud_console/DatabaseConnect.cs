@@ -9,10 +9,31 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CrudConsole
 {
+
+    public interface IDatabase
+    {
+        public void ReadDatabase();
+        public void AddBook();
+        public void EditBook();
+        public void RemoveBook();
+    }
+
+    public class LibraryContext : DbContext
+    {
+        public DbSet<Book> simple_library { get; set; }
+
+        public static String connectionString = "Server=localhost;User ID=sa;Password=9n8kZ81J0iuB;Initial Catalog=SIMPLE_LIBRARY;Integrated Security=false;TrustServerCertificate=True";
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(connectionString);
+        }
+
+    }
+
     public class DapperDBConnect
     {
         public static String connectionString = "Server=localhost;User ID=sa;Password=9n8kZ81J0iuB;Initial Catalog=SIMPLE_LIBRARY;Integrated Security=false;TrustServerCertificate=True";
-        
+
         static public void ConnectToDB()
         {
             using (var connection = new SqlConnection(connectionString))
@@ -27,21 +48,10 @@ namespace CrudConsole
                 }
             }
         }
-        
-    }
-
-    public class LibraryContext : DbContext
-    {
-        public DbSet<Book> simple_library { get; set; }
-
-        public static String connectionString = "Server=localhost;User ID=sa;Password=9n8kZ81J0iuB;Initial Catalog=SIMPLE_LIBRARY;Integrated Security=false;TrustServerCertificate=True";
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(connectionString);
-        }
 
     }
-    public class EntityMethods
+
+    public class EntityDBConnect
     {
 
         public static void QueryBooks()
