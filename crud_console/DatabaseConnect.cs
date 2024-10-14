@@ -30,11 +30,26 @@ namespace CrudConsole
 
     }
 
-    public class DapperDBConnect
+    public class DapperDBConnect : IDatabase
     {
         public static String connectionString = "Server=localhost;User ID=sa;Password=9n8kZ81J0iuB;Initial Catalog=SIMPLE_LIBRARY;Integrated Security=false;TrustServerCertificate=True";
 
-        static public void ConnectToDB()
+        static public void ReadDatabase()
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var sql = "SELECT * FROM dbo.simple_library";
+
+                var books = connection.Query<Book>(sql).ToList();
+
+                foreach (Book book in books)
+                {
+                    Console.WriteLine(book.ToString());
+                }
+            }
+        }
+
+        static public void AddBook()
         {
             using (var connection = new SqlConnection(connectionString))
             {

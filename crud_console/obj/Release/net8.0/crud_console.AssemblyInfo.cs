@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("crud_console")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51c3a2f8d8904c2eaa699939a78ae4270ec62b3a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50d8bec4fe720914ef6ddb0b2190bcf3555a3e66")]
 [assembly: System.Reflection.AssemblyProductAttribute("crud_console")]
 [assembly: System.Reflection.AssemblyTitleAttribute("crud_console")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
