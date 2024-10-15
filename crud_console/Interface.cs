@@ -2,7 +2,7 @@
 
 namespace CrudConsole
 {
-    class Interface
+    public class Interface
     {
 
         static public void PrintOptions()

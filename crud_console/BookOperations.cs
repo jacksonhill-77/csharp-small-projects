@@ -1,12 +1,12 @@
-using System;
+using Newtonsoft.Json;
 
 namespace CrudConsole
 {
-    public class UI
+    public class BookOperations
     {
         // These following methods become part of the interface/ UI class, and are used in the database access classes
-
-        static string ChangeBookProperties(string book)
+        private static string filePath = FilePaths.filePath;
+        public static string ChangeBookProperties(string book)
         {
             bool run = true;
             while (run)
@@ -28,6 +28,13 @@ namespace CrudConsole
             }
 
             return book;
+        }
+
+        public static int GetIndexOfBookToModify(string modificationType)
+        {
+            Console.WriteLine($"Please select the number of a book to {modificationType}:");
+            Interface.PrintLines(FileInteracter.ReadLinesFromFile(filePath), filePath);
+            return int.Parse(Console.ReadLine()) - 1;
         }
 
         static string ModifyBook(string book, int propertyIndex)
@@ -53,15 +60,8 @@ namespace CrudConsole
             Console.WriteLine(Interface.ConvertLineToPropertiesList(updatedBook));
         }
 
-        static int GetIndexOfBookToModify(string modificationType)
-        {
-            Console.WriteLine($"Please select the number of a book to {modificationType}:");
-            Interface.PrintLines(FileInteracter.ReadLinesFromFile(filePath), filePath);
-            return int.Parse(Console.ReadLine()) - 1;
-        }
 
-
-        static List<String> ConvertBookListToJSON(List<Book> books)
+        public static List<String> ConvertBookListToJSON(List<Book> books)
         {
             List<String> output = new List<String>();
             foreach (Book book in books)
@@ -71,7 +71,7 @@ namespace CrudConsole
             return output;
         }
 
-        static List<Book> GetUsersListOfBooks()
+        public static List<Book> GetUsersListOfBooks()
         {
             bool run = true;
             List<Book> books = new List<Book>();
@@ -115,6 +115,5 @@ namespace CrudConsole
             return new Book(pid, title, author, publishDate);
         }
     }
-}
 }
 
