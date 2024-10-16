@@ -1,7 +1,7 @@
 ﻿using System;
 using CrudConsole;
 
-public class CrudOperations
+public class CRUDLogic
 {
     // These 4 methods become part of the database class
 

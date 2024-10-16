@@ -13,7 +13,7 @@ Interface.PrintOptions();
 do
 {
     string userInput = Console.ReadLine();
-    CrudOperations crudOperations = new CrudOperations();
+    CRUDLogic crudOperations = new CRUDLogic();
     switch (userInput)
     {
         case "1":
